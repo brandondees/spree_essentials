@@ -15,11 +15,12 @@ Gem::Specification.new do |s|
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  
+
   s.require_paths = ["lib"]
 
+  s.add_dependency('tinymce-rails',   '~> 3.5.8')
+
   s.add_runtime_dependency('spree',  '~> 1.2.0')
-  s.add_runtime_dependency('rdiscount',   '~> 1.6.8')
 
   s.add_development_dependency 'm'
   s.add_development_dependency('mocha',        '~> 0.12.7')
@@ -32,5 +33,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency('sass-rails',   '~> 3.2.5')
   s.add_development_dependency('jquery-rails', '~> 2.1.3')
   # s.add_development_dependency('turn',         '~> 0.9.3')
-  
+
 end
